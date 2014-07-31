@@ -1,0 +1,26 @@
+Привет,
+
+В качестве домашних заданий для последующих лекций будет выступать создание блога. PSD знакомое многим по "JS<Hard>Core" лежит в аттачменте.
+Обращаю ваше внимание, что вы можете заверстать блог без использования стилей или подключить bootstrap, полнейшее соответствие psd не обязательно.
+На данном этапе вам нужно:
+1)Вывести на страницу уже существующие статьи (создайте массив в json формате со статьями)
+2)Создать форму добавления новой статьи c валидацией. Форма должна открываться в popup-е по клику на кнопку “New Post”.
+Поля формы:
+•	Author (required)
+•	Image (not required) url картинки
+•	Title (required)
+•	Text (required)
+К информации введенной пользователем так же нужно добавить DateTime создания статьи.
+3)Продолжить выполнение курса по AngularJS на  www.codeschool.com 
+
+Дедлайн следующий четверг.
+
+Полезные ссылки:
+https://www.youtube.com/watch?v=mVjpwia1YN4 (Очень познавательное видео про two-way binding и dirty checking в angular.js)
+https://egghead.io/lessons/angularjs-experimental-controller-as-syntax ($scope and this in AngularJS controllers)
+
+Записи лекций:
+https://yadi.sk/d/fOm8bDNRWq96x
+
+Гуглдок:
+https://docs.google.com/spreadsheets/d/1eptHoa-o3on5j8_-2QL05nPwg5075Se7oTmJ1CAegx4/edit#gid=0

@@ -1,0 +1,65 @@
+body, html {height: 100%;}
+body {background: url('images/paper-background.jpg')}
+.articles {
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	box-shadow: 0 0 20px #e5e5e5;
+	padding: 15px;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+header h1 {color: #5bb75b;}
+.additional-info {font-style: italic; font-size: 12px;}
+
+.separator-image {
+	margin: 0 auto;
+	display: block;
+}
+
+.article-container {
+	margin-bottom: 50px;
+}
+
+.add-article-container {
+	position: absolute;
+	top: 150px;
+	width: 610px;
+	left: 50%;
+	margin-left: -305px;
+	background: #fff;
+	padding: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	z-index: 1000;
+}
+.overlay {
+	background: #000;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 800;
+}
+.form-buttons {
+	margin-top: 50px;
+}
+
+form legend {color: #5bb75b; font-size: 30px;}
+
+.popup-close-btn {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+}
