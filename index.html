@@ -8,71 +8,14 @@
 </head>
 <body ng-controller="BlogController as blog">
     <div class="container articles">
-        <div ng-repeat="article in blog.articles" class="article-container">
-            <header>
-                <h1>{{article.title}}</h1>
-            </header>
-            <p class="row additional-info">
-                <span class="span2">{{article.author}}</span>
-                <span class="span2 offset7">{{article.date | date: 'd MMM yyyy'}}</span>
-            </p>
-            <article>
-                <img ng-src="{{article.image}}" width="300" />
-                <p>{{article.text}}</p>
-            </article>
-
-            <img src="images/post_separator_3.png" width="250" class="separator-image" />
-        </div>
+        <!-- Articles directive -->
+        <div blog-articles ng-repeat="article in blog.articles" class="article-container"></div>
 
         <button class="btn btn-success" ng-click="blog.showPopup()">Добавить новую запись</button>
     </div>
 
-    <div class="add-article-popup" ng-show="blog.isPopup()">
-        <div class="add-article-container container">
-            <span class="icon-remove popup-close-btn" ng-click="blog.closePopup()"></span>
-            <form name="newArticleForm" ng-submit="newArticleForm.$valid && blog.addPost()" novalidate>
-                <legend>Добавление записи</legend>
-
-                <div class="control-group" ng-class="{'error': newArticleForm.articleTitle.$error.required, 'success': !newArticleForm.articleTitle.$error.required}"> <!-- классы error || success -->
-                    <label class="control-label" for="articleTitle"></label>
-                    <div class="controls">
-                        <input type="text" id="articleTitle" name="articleTitleName" placeholder="Название статьи" class="input-xxlarge" ng-model="article.title" required /><br />
-                        <span class="help-inline" ng-show="newArticleForm.articleTitleName.$error.required">Поле обязательное для заполнения</span>
-                    </div>
-                </div>
-
-                <div class="control-group" ng-class="{'error': newArticleForm.articleImage.$error.url, 'success': !newArticleForm.articleImage.$error.url}">
-                    <label class="control-label" for="articleImage"></label>
-                    <div class="controls">
-                        <input type="url" id="articleImage" name="articleImageName" placeholder="Ссылка на изображение" class="input-xxlarge" ng-model="article.image" /><br />
-                        <span class="help-inline" ng-show="newArticleForm.articleImageName.$error.url">Неверный url</span>
-                    </div>
-                </div>
-
-                <div class="control-group" ng-class="{'error': newArticleForm.articleText.$error.required, 'success': !newArticleForm.articleText.$error.required}">
-                    <label class="control-label" for="articleText"></label>
-                    <div class="controls">
-                        <textarea rows="4" id="articleText" name="articleTextName" class="input-xxlarge" placeholder="Текст сообщения" ng-model="article.text" required></textarea><br />
-                        <span class="help-inline" ng-show="newArticleForm.articleTextName.$error.required">Поле обязательное для заполнения</span>
-                    </div>
-                </div>
-
-                <div class="control-group" ng-class="{'error': newArticleForm.articleAuthor.$error.required, 'success': !newArticleForm.articleAuthor.$error.required}">
-                    <label class="control-label" for="articleAuthor"></label>
-                    <div class="controls">
-                        <input type="text" id="articleAuthor" name="articleAuthorName" placeholder="Ваше имя" class="input-xxlarge" ng-model="article.author" required /><br />
-                        <span class="help-inline" ng-show="newArticleForm.articleAuthorName.$error.required">Поле обязательное для заполнения</span>
-                    </div>
-                </div>
-                
-                <div class="form-buttons">
-                    <button type="submit" class="btn btn-success">Добавить запись</button>
-                    <button class="btn" ng-click="blog.clearForm()">Очистить форму</button>
-                </div>
-            </form>
-        </div>
-        <div class="overlay"></div>
-    </div>
+    <!-- Popup directive -->
+    <div class="add-article-popup" ng-show="blog.isPopup()" blog-popup></div>
 
 
     <script type="text/javascript" src="angular.min.js"></script>

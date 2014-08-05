@@ -25,6 +25,21 @@
 		};
 	});
 
+	app.directive('blogArticles', function() {
+		return {
+	        restrict: "A",
+	      	templateUrl: "directives/blog-articles.html"
+    	};
+	});
+
+	app.directive('blogPopup', function() {
+		return {
+	        restrict: "A",
+	      	templateUrl: "directives/blog-popup.html"
+    	};
+	});
+	
+
 	var posts = [
 		{
 			title: 'Blog title 1',

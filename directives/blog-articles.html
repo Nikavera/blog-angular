@@ -1,0 +1,13 @@
+<header>
+    <h1>{{article.title}}</h1>
+</header>
+<p class="row additional-info">
+    <span class="span2">{{article.author}}</span>
+    <span class="span2 offset7">{{article.date | date: 'd MMM yyyy'}}</span>
+</p>
+<article>
+    <img ng-src="{{article.image}}" width="300" />
+    <p>{{article.text}}</p>
+</article>
+
+<img src="images/post_separator_3.png" width="250" class="separator-image" />
